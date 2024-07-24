@@ -1,0 +1,76 @@
+.swiper-card {
+    display: flex;
+    width: 405px;
+    height: auto;
+    color: @black;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none;
+
+        &:active {
+            .swiper-card__title {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
+
+        &:hover .swiper-card__title {
+            @media (hover: hover) {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
+
+        &--show-more {
+            color: @black;
+            font-family: @font1;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    &__picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 0 25px;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 107, 16%;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: -1px;
+        min-height: 66px;
+
+
+        &--2 {
+            padding-bottom: 33px;
+        }
+    }
+    &__description {
+        margin-bottom: auto;
+    }
+
+    &__time {
+        margin-top: 10px;
+    }
+}
+
+// .swiper-card__title {
+//     font-size: 24px;
+//     font-weight: 700;
+//     margin: -1px;
+// }

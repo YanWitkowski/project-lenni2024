@@ -1,0 +1,38 @@
+.section-title {
+    .width_624;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 62px;
+    margin: 0px auto 150px;
+    padding: 0px 45px;
+    background-color: @black;
+    color: @white;
+    font-family: @font2;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.277;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media @bw1340 {
+        margin-bottom: 130px;
+        padding: 8px 72.6px;
+    }
+    
+    @media @bw768 {
+        font-size: 24px;
+        //line-height: 31px;
+        min-height: 52px;
+        padding: 10px 40px;
+        margin-bottom: 100px;
+    }
+
+    @media @bw450 {
+        font-size: 16px;
+        //line-height: 20px;
+        min-height: 42px;
+        margin-bottom: 80px;
+        padding: 11px 19px;
+    }
+}

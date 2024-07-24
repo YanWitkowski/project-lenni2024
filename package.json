@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "less": "^4.2.0",
     "nuxt": "^3.12.4",
+    "vite-svg-loader": "^5.1.0",
     "vue": "latest"
   }
 }

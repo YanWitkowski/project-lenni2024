@@ -1,0 +1,207 @@
+.page-footer {
+    box-sizing: border-box;
+    padding: 60px 0 75px;
+
+    span#email-error {
+        font-size: 14px;
+        display: block;
+        margin: 50px 0 0;
+        color: @red_dark;
+        position: absolute;
+    }
+
+
+    &__container {
+        .container;
+    }
+
+    &__border {
+        display: flex;
+        margin-bottom: 60px;
+
+        &::before,
+        &::after {
+            content: '';
+            flex-grow: 1;
+            height: 2px;
+            width: 2px;
+        }
+
+        &::before {
+            margin-right: 50px;
+            background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%);
+
+            @media @bw500 {
+                margin-right: 20px;
+            }
+        }
+
+        &::after {
+            margin-left: 50px;
+            background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
+
+            @media @bw500 {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media @bw450 {
+            flex-direction: column;
+        }
+    }
+
+    &__nav {
+        margin-right: 30px;
+        position: relative;
+        padding-left: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: @red;
+        }
+    }
+
+    &__nav-link {
+        display: flex;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: @black;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover:hover) {
+                color: @red;
+            }
+
+            &:active {
+                color: @red;
+            }
+        }
+
+        @media @bw768 {
+            font-size: 14px;
+        }
+
+        @media @bw550 {
+            display: block;
+        }
+
+        @media @bw450 {
+            display: flex;
+        }
+    }
+
+    &__millennials {
+        position: absolute;
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 44px;
+
+        @media @bw1340 {
+            margin-top: 42px;
+        }
+
+        @media @bw1020 {
+            margin-top: 162px;
+        }
+
+        @media @bw768 {
+            font-size: 14px;
+        }
+
+        @media @bw450 {
+            right: 0;
+            margin-top: 232px;
+        }
+    }
+
+    &__end {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: -36px;
+        flex-flow: row;
+        gap: 25px;
+
+        @media @bw1020 {
+            margin-top: 25px;
+        }
+
+        @media @bw450 {
+            flex-flow: column;
+            gap: 10px;
+        }
+
+        &--1 {
+            display: flex;
+            justify-content: flex-start;
+            gap: 60px;
+
+            @media @bw1020 {
+                padding-top: 45px;
+            }
+
+            @media @bw768 {
+                flex-flow: column;
+                gap: 20px;
+            }
+        }
+
+        &--2 {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+
+            @media @bw1020 {
+                padding-top: 45px;
+            }
+
+            @media @bw450 {
+                padding-top: 0;
+            }
+    
+        }
+
+    }
+
+    &__tagree {
+        padding-left: 15px;
+        transition: color 0.2s;
+        margin-top: 3px;
+
+            &:active {
+                color: @red_dark;
+            }
+
+            &:hover {
+                @media (hover: hover) {
+                    color: @red_dark;
+                }
+            }
+    }
+
+}

@@ -1,0 +1,57 @@
+.events {
+    padding-top: 140px 0 100px;
+
+    &__listing {
+        margin-top: 200px;
+        margin-bottom: 100px;
+
+        @media @bw960 {
+            margin-top: 150px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 104px;
+        }
+
+        @media @bw400 {
+            margin-top: 80px;
+        }
+    }
+
+    &__services {
+        .container;
+        margin-bottom: 50px;
+
+        @media @bw1340 {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__services-description {
+        max-width: 870px;
+        margin: 0 0 60px 0;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media @bw960 {
+            margin-bottom: 50px;
+        }
+
+        @media @bw450 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        align-self: center;
+    }
+
+    &__link_down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+        top: -20px;
+    }
+}

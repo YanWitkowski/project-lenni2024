@@ -1,0 +1,126 @@
+.pp {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 90px 50px 50px;
+    overflow-y: auto;
+    z-index: 110;
+    background-color: gray;
+
+    @supports (backdrop-filter: blur(25px)) {
+        background-color: @black_40;
+        backdrop-filter: blur(25px);
+    }
+
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-width: 1210px;
+        width: 100%;
+        margin: auto;
+        padding: 70px 40px 40px;
+        background-color: @gray;
+        background-image: url(~/assets/images/noise.png);
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: auto;
+
+        @media @bw768 {
+            padding: 40px 20px 20px;
+        }
+    }
+
+    &__btn-icon {
+        pointer-events: none;
+    }
+
+    &__title {
+        margin: -110px 0 70px;
+        box-sizing: border-box;
+        padding: 10px 84px;
+        max-width: 595px;
+        background-color: @black;
+        text-transform: uppercase;
+        font-family: @font2;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.44px;
+        color: @white;
+
+        @media @bw768 {
+            padding: 10px 60px 10px 18px;
+            max-width: 419px;
+            margin-left: -6px;
+            margin-top: -84px;
+            margin-bottom: 56px;
+        }
+
+        @media @bw600 {
+            font-size: 14px;
+            line-height: 19px;
+            max-width: 300px;
+        }
+
+        @media @bw450 {
+            max-width: 225px;
+        }
+
+        @media @bw400 {
+            max-width: 170px;
+        }
+    }
+
+    &__sticky-close {
+        position: sticky;
+        align-self: flex-end;
+        top: 0;
+        width: 0;
+    }
+
+    &__sticky-btn {
+        position: absolute;
+        right: -70px;
+        top: -100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        background-color: @black;
+        color: @white;
+        transition: background-color 0.2s;
+
+        &:hover {
+            @media (hover:hover) {
+                background-color: @red_dark;
+            }
+        }
+
+        @media @bw768 {
+            right: -52px;
+            top: -70px;
+        }
+
+        @media @bw600 {
+            right: -39px;
+            top: -58px;
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &__form {
+        margin: auto;
+        max-width: 870px;
+    }
+}

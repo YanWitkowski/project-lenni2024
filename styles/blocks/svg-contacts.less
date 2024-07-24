@@ -1,0 +1,46 @@
+.svg-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    margin-top: 64px;
+
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    @media @bw1340 {
+        margin-top: 62px;
+
+    }
+
+    @media @bw960 {
+        margin-top: 60px;
+    }
+
+    @media @bw450 {
+        gap: 30px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 58px;
+        width: 58px;
+        border-radius: 29px;
+        background-color: @black;
+        color: @red;
+
+        transition: color 0.2s;
+
+        &:active {
+            color: @red_dark;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+            }
+        }
+    }
+}
