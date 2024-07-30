@@ -1,0 +1,4 @@
+export {
+    useStore
+}
+from "@/store";

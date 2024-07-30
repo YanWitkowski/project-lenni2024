@@ -1,18 +1,31 @@
 <template>
     <div class="home">
-        <header class="main-header home__main-header">
-            <h1 class="main-header__title">АРТ — ПРОСТРАНСТВО</h1>
-            <picture class="main-header__picture">
-                <img src="assets/images/LENNI.png" />
-            </picture>
-            <p class="main-header__text"> ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
-                <br> МЕСТО ДЛЯ НАСТОЯЩЕГО
-            </p>
-        </header>
+        <HomeTop class="home__main-header"/>
+        <section class="offers home__offers">
+            <div class="offers__container">
+                <p class="offers__title">
+                    Я ХОЧУ:
+                </p>
+                <div class="offers__block">
+                    <button type="button" class="offers__btn1 btn btn--red" @click="openEventsPp">
+                        Провести мероприятие
+                    </button>
+                    <button type="button" class="offers__btn2 btn">
+                        Стать арендатором
+                    </button>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
+<!-- 50 минут -->
 
 <script setup>
+
+const store = useStore();
+const openEventsPp = () => {
+    store.modal.eventPP = true;
+}
 
 </script>
 

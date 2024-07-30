@@ -6,9 +6,18 @@
       </main>
       <PageFooter />
   </div>
+  <ModalPp />
 </template>
 <script setup>
+const store = useStore();
 useHead({
+  bodyAttrs: {
+    class: {
+      body: true,
+      "show-nav": () => store.navActive,
+      overflow: () => store.getModal
+    }
+  },
   meta: [{
     name: "format-detection",
     content: "telephone=no"

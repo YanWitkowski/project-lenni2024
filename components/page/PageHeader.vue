@@ -1,3 +1,48 @@
+<template>
+    <header class="page-header">
+        <div class="page-header__container">
+        
+            <NuxtLink to="/" class="page-header__logo">
+                <SvgIcon class="page-header__logo-icon" name="logo" width="202" height="147" />
+            </NuxtLink>
+
+            <nav class="page-header__nav">
+                <NuxtLink to="/events" class="page-header__nav-link">Мероприятия</NuxtLink>
+                <NuxtLink to="/" class="page-header__nav-link">Блог</NuxtLink>
+                <NuxtLink to="/" class="page-header__nav-link">О нас</NuxtLink>
+                <NuxtLink to="/" class="page-header__nav-link">Контакты</NuxtLink>
+
+                <div class="page-header__nav-user">
+                    <NuxtLink to="/" class="page-header__nav-user-link">
+                        Ян В.
+                    </NuxtLink>
+
+                    <button type="button" class="page-header__nav-logout">
+                        <SvgIcon class="page-header__nav-logout-icon" name="door" width="24" height="24" />
+                    </button>
+                </div>
+            </nav>
+
+            <div class="page-header__right-block">
+                <a href="#" class="page-header__user-btn">
+                    Войти
+                    <SvgIcon class="page-header__user-icon" name="user" width="21" height="18" />
+                </a>
+                <button type="button" class="page-header__nav-toggle" @click="toggleNav"></button>
+            </div>
+        </div>
+
+    </header>
+</template>
+
+<script setup>
+const store = useStore();
+const toggleNav = () => {
+    store.navActive = !store.navActive;
+};
+</script>
+
+<style lang="less">
 .page-header {
     position: fixed;
     top: 0;
@@ -291,3 +336,4 @@
         }
     }
 }
+</style>

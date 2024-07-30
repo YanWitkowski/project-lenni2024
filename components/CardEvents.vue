@@ -1,3 +1,64 @@
+<template>
+    <article class="event-card">
+        <a href="#" class="event-card__link">
+            <picture class="event-card__picture">
+                <source type="image/webp" :srcset="img_webp" />
+
+                <img :src="img" :alt="alt" class="event-card__img" />
+            </picture>
+
+            <h4 class="event-card__title">{{ title }}</h4>
+
+            <p class="event-card__description">{{ descr }}</p>
+
+            <time datetime="datetime" class="event-card__time">{{ time }}</time>
+        </a>
+    </article>
+</template>
+
+<script setup>
+import { computed } from "vue";
+
+const { data } = defineProps({
+    data: {
+        required: true,
+        type: Object,
+        default: () => { }
+    }
+  
+});
+
+const img_webp = computed(() => {
+    return data.img_webp || ""
+});
+
+const img = computed(() => {
+    return data.img || ""
+});
+
+const alt = computed(() => {
+    return data.alt || ""
+});
+
+const title = computed(() => {
+    return data.title || ""
+});
+
+const descr = computed(() => {
+    return data.descr || ""
+});
+
+const datetime = computed(() => {
+    return data.datetime || ""
+});
+
+const time = computed(() => {
+    return data.time || ""
+});
+
+</script>
+
+<style lang="less">
 .event-card {
     display: flex;
     width: 405px;
@@ -79,3 +140,4 @@
         }
     }
 }
+</style>
